@@ -1,0 +1,155 @@
+.title {
+  font-family: 'Raleway', sans-serif;
+  font-size: -webkit-xxx-large;
+  font-weight: 600;
+  padding-top: 1em;
+}
+
+.title-small {
+  font-family: 'Raleway', sans-serif;
+  font-size: x-large;
+  font-weight: 400;
+  padding-top: 1em;
+}
+
+.icon {
+  width: 5em;
+}
+
+.header {
+  width: 100%;
+  background-color: #3bc492;
+  padding: 1%;
+  display: flex;
+
+  .header-title {
+    width:50%;
+  }
+}
+
+.logged-user {
+  // display: flex;
+  float: right;
+  width: 50%;
+  text-align: right;
+
+  .logged-user-name{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: large;
+    padding-top: 2.5em;
+    padding-right: 1em;
+  }
+
+  .logged-user-image {
+    // border-radius: 5em;
+    border: 0.3em solid gray;
+  }
+}
+
+.btn-login {
+  background: #8cd934;
+  background-image: -webkit-linear-gradient(top, #8cd934, #2bb84c);
+  background-image: -moz-linear-gradient(top, #8cd934, #2bb84c);
+  background-image: -ms-linear-gradient(top, #8cd934, #2bb84c);
+  background-image: -o-linear-gradient(top, #8cd934, #2bb84c);
+  background-image: linear-gradient(to bottom, #8cd934, #2bb84c);
+  font-family: 'Cagliostro';
+  color: #eee;
+  font-size: 70px;
+  padding: 10px 20px 10px 20px;
+  text-decoration: none;
+  &hover {
+    background: #3cfc9f;
+  background-image: -webkit-linear-gradient(top, #3cfc9f, #3498db);
+  background-image: -moz-linear-gradient(top, #3cfc9f, #3498db);
+  background-image: -ms-linear-gradient(top, #3cfc9f, #3498db);
+  background-image: -o-linear-gradient(top, #3cfc9f, #3498db);
+  background-image: linear-gradient(to bottom, #3cfc9f, #3498db);
+  text-decoration: none;
+  }
+}
+
+.foursquare-logo {
+  width: 50px;
+  height: 50px;
+}
+
+.panel {
+  margin-bottom: 20px;
+  background-color: #fff;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+  box-shadow: 0 1px 1px rgba(0,0,0,0.05);
+
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  margin: 0 3%;
+  white-space: normal;
+  margin-bottom: 2em;
+  border-radius:1em;
+  border-color: #ddd;
+  height: fit-content;
+}
+
+.panel-thumbnail {
+  border-radius: 1em 1em 0em 0em;
+  width: 100%;
+}
+
+.panel-body {
+  padding: 15px;
+  font-weight: 600;
+  font-size: large;
+  color: grey;
+}
+
+.row {
+    height: 100%;
+    margin-left: 0;
+    margin-right: 0;
+    display: flex;
+}
+
+.img-margin {
+  margin-right: 1em;
+  border: 0.2em solid #ddd;
+
+}
+
+.lead {
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+.separator {
+  width: 100%;
+  border-bottom: 0.2rem solid;
+  border-color: #ddd;
+  margin-bottom: 1.25rem;
+}
+
+.user-info {
+    margin-right: 0px;
+    margin-left: 0px;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.logout-link {
+  text-align: right;
+  margin-top: 3em;
+  width: 15%;
+
+  &a {
+    font-size: x-large !important;
+  }
+}
+
+.no-items {
+  margin-left: 2em;
+}

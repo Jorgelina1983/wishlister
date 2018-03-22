@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p class="title-small">Wishlist</p>
+<div class="separator"></div>
+
+<div class="row" id="wishlist-items">
+  <% if @wishlists.any? %>
+    <% @wishlists.each do |wishlist| %>
+        <%= render 'wishlists/wishlist_card', wishlist: wishlist %>
+    <% end %>
+  <% else %>
+    <h2 class="no-items">No wishes yet!</h2>
+  <% end %>
+</div>
+
+<script>
+  function removeVenue(a) {
+    if (confirm('Are you sure?')) {
+      var venue_id_array = a.id.split('_');
+      var venue_id = venue_id_array[venue_id_array.length-1];
+
+      $.ajax({
+            url:"<%= remove_wishlist_url() %>",
+            data: { venue_id: venue_id },
+            method: "POST",
+            success:function(data) {
+              $('#recent-items').prepend(data['html_data']);
+              $('.no-items').hide();
+              $(a.parentElement.parentElement.parentElement).hide("slow");
+            },
+            error: function(jqXHR, textStatus, errorThrown){
+                console.error(errorThrown);
+            }
+        });
+      }
+  }
+</script>

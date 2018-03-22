@@ -1,0 +1,19 @@
+<%= form_for(session) do |f| %>
+  <% if session.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(session.errors.count, "error") %> prohibited this session from being saved:</h2>
+
+      <ul>
+      <% session.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <a href=<%= @auth_url %> target="_self" class="btn-login">
+      <img src="https://sweetiq.com/wp-content/uploads/logos/logo-foursquare.png" class="foursquare-logo" /> Log in with foursquare
+    </a>
+  </div>
+<% end %>

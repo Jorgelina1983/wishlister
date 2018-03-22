@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p class="title-small">Recent</p>
+<div class="separator"></div>
+
+<div class="row" id="recent-items">
+  <% if @recents.any? %>
+    <% @recents.each do |recent| %>
+      <%= render 'recent_card', recent: recent %>
+    <% end %>
+   <% else %>
+    <h2 class="no-items">No recent venues from firends yet!</h2>
+  <% end %>
+</div>
+
+<script>
+  function addVenue(a) {
+    var venue_id_array = a.id.split('_');
+    var venue_id = venue_id_array[venue_id_array.length-1];
+    var venue_name = $('#venue_name_' + venue_id).text();
+    var venue_photo = $('#venue_photo_' + venue_id)[0].currentSrc;
+
+    $.ajax({
+            url:"<%= wishlists_url %>",
+            data: { venue_id: venue_id,
+                    venue_name: venue_name,
+                    venue_photo: venue_photo },
+            method: "POST",
+            success:function(data) {
+              // inject wishlist card with the new venue;
+              $('#wishlist-items').append(data['html_data']);
+              $('.no-items').hide();
+              $(a.parentElement.parentElement.parentElement).hide("slow");
+            },
+            error: function(jqXHR, textStatus, errorThrown){
+                console.error(errorThrown);
+            }
+        });
+  }
+</script>

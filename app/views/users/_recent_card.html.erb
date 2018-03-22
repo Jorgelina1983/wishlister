@@ -1,0 +1,17 @@
+<div class="panel panel-default">
+  <div class="panel-thumbnail" >
+    <img src=<%= "#{recent[:venue_photo]}" %> class="panel-thumbnail" id=<%= "venue_photo_#{recent[:venue_id]}" %>>
+  </div>
+  <div class="panel-body">
+    <h3 id=<%= "venue_name_#{recent[:venue_id]}" %>>
+      <img src="https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678092-sign-add-128.png" height="40px" width="40px" id=<%= "add_venue_#{recent[:venue_id]}" %> onClick="addVenue(this);" class="pointer" />
+      <%= "#{recent[:venue_name]}" %>
+    </h3>
+    <div class="separator"></div>
+    <p class="user-info">
+      <img src=<%= "#{recent[:user_photo]}" %> height="70px" width="70px" class="rounded-circle img-margin">
+      <%= "#{recent[:user_name]}" %>
+    </p>
+  </div>
+</div>
+

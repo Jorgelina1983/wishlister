@@ -1,0 +1,12 @@
+<div class="panel panel-default">
+  <div class="panel-thumbnail" >
+    <img src=<%= "#{wishlist.venue_photo}" %> class="panel-thumbnail" id=<%= "venue_photo_#{wishlist.venue_id}" %>>
+  </div>
+  <div class="panel-body">
+    <h3 id=<%= "venue_name_#{wishlist.venue_id}" %>>
+      <img src="https://cdn2.iconfinder.com/data/icons/round-interface-1/217/50-512.png" height="40px" width="40px" id=<%= "remove_venue_#{wishlist.venue_id}" %> onClick="removeVenue(this);" class="pointer" />
+      <%= "#{wishlist.venue_name}" %>
+    </h3>
+  </div>
+</div>
+
