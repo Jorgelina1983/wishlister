@@ -12,6 +12,12 @@ Requirements for this application to run locally:
 - `bundle install`
 - `rake db:migrate`
 
+After this there are 3 enviorment variables that need to be set:
+
+export CLIENT_ID=<ask_me_for_the_value>
+export CLIENT_SECRET=<ask_me_for_the_value>
+export REDIRECT_URL=http://localhost:3000/foursquare/callback
+
 And start the Rails server with `rails s`.
 The root url for the app to run locally will be http://localhost:3000.
 
