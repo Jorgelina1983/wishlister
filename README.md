@@ -1,24 +1,17 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a basic project in rails that interacts with Foursquare API. Get users, venues and recent checkins form friends and creates a wishlist of venues.
 
-Things you may want to cover:
+It will fetch 15 venues from recent checkins from friends. Magic number, no reason, I just choose 15.
 
-* Ruby version
+Requirements for this application to run locally:
 
-* System dependencies
+- Install Ruby 2.3.1
+- Get the repo with the code.
+- `gem install bundler`
+- `bundle install`
+- `rake db:migrate`
 
-* Configuration
+and start the Rails server with `rails s`.
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+If this looks too complicated, https://jaya-wishlister.herokuapp.com this is a live demo of the app.
