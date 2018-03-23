@@ -6,7 +6,7 @@ class FoursquareController < ApplicationController
     url += "client_id=#{ENV['CLIENT_ID']}&"
     url += "client_secret=#{ENV['CLIENT_SECRET']}&"
     url += "grant_type=authorization_code&"
-    url += "redirect_uri=#{ENV['REDIRECT_URI']}&"
+    url += "redirect_uri=#{ENV['REDIRECT_URL']}&"
     url += "code=#{auth_code}&"
 
     response = JSON.parse(HTTParty.get(url, headers: { 'Content-Type' => 'application/x-www-form-urlencoded' }).body)

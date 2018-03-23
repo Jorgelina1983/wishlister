@@ -14,9 +14,8 @@ class SessionsController < ApplicationController
 
   # GET /sessions/new
   def new
-    @session = Session.new
     client_id = ENV['CLIENT_ID']
-    redirect_uri = ENV['REDIRECT_URI']
+    redirect_uri = ENV['REDIRECT_URL']
     @auth_url = "https://foursquare.com/oauth2/authorize?client_id=#{client_id}&response_type=code&redirect_uri=#{redirect_uri}"
   end
 
