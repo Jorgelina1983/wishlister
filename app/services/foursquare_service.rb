@@ -1,7 +1,6 @@
 module FoursquareService
   class API
     def get_auth_token(auth_code)
-      byebug
       url = "https://foursquare.com/oauth2/access_token?"
       url += "client_id=#{ENV['CLIENT_ID']}&"
       url += "client_secret=#{ENV['CLIENT_SECRET']}&"
@@ -30,7 +29,7 @@ module FoursquareService
 
     def get_recent_checkins(auth_token)
       url = "https://api.foursquare.com/v2/checkins/recent?"
-      url += "limit=5&"
+      url += "limit=15&"
       url += "oauth_token=#{auth_token}&"
       url += "v=20180101"
 

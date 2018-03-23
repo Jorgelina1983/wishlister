@@ -42,7 +42,6 @@
   }
 
   .logged-user-image {
-    // border-radius: 5em;
     border: 0.3em solid gray;
   }
 }
@@ -61,12 +60,12 @@
   text-decoration: none;
   &hover {
     background: #3cfc9f;
-  background-image: -webkit-linear-gradient(top, #3cfc9f, #3498db);
-  background-image: -moz-linear-gradient(top, #3cfc9f, #3498db);
-  background-image: -ms-linear-gradient(top, #3cfc9f, #3498db);
-  background-image: -o-linear-gradient(top, #3cfc9f, #3498db);
-  background-image: linear-gradient(to bottom, #3cfc9f, #3498db);
-  text-decoration: none;
+    background-image: -webkit-linear-gradient(top, #3cfc9f, #3498db);
+    background-image: -moz-linear-gradient(top, #3cfc9f, #3498db);
+    background-image: -ms-linear-gradient(top, #3cfc9f, #3498db);
+    background-image: -o-linear-gradient(top, #3cfc9f, #3498db);
+    background-image: linear-gradient(to bottom, #3cfc9f, #3498db);
+    text-decoration: none;
   }
 }
 
@@ -92,6 +91,7 @@
   border-radius:1em;
   border-color: #ddd;
   height: fit-content;
+  max-width: 20em;
 }
 
 .panel-thumbnail {

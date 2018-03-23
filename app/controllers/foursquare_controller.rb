@@ -11,8 +11,8 @@ class FoursquareController < ApplicationController
     session[:user_id] = user.id
     redirect_to user_url(user)
 
-    rescue JSON::ParserError => e
-      Rails.logger.error(e.message)
-      return false
-    end
+  rescue JSON::ParserError => e
+    Rails.logger.error(e.message)
+    return false
   end
+end
