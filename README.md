@@ -12,6 +12,7 @@ Requirements for this application to run locally:
 - `bundle install`
 - `rake db:migrate`
 
-and start the Rails server with `rails s`.
+And start the Rails server with `rails s`.
+The root url for the app to run locally will be http://localhost:3000.
 
 If this looks too complicated, https://jaya-wishlister.herokuapp.com this is a live demo of the app.
