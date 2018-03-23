@@ -14,8 +14,10 @@ Requirements for this application to run locally:
 
 After this there are 3 enviorment variables that need to be set:
 
-export CLIENT_ID=<ask_me_for_the_value>
+export CLIENT_ID=<ask_me_for_the_value> 
+
 export CLIENT_SECRET=<ask_me_for_the_value>
+
 export REDIRECT_URL=http://localhost:3000/foursquare/callback
 
 And start the Rails server with `rails s`.
