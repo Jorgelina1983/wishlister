@@ -57,10 +57,14 @@ class WishlistsController < ApplicationController
         venue_id = recent['venue']['id']
 
         venue_response = FoursquareService::API.new.get_venue(venue_id, session[:access_token])
-        prefix = venue_response['response']['venue']['photos']['groups'][0]['items'][0]['prefix']
-        suffix = venue_response['response']['venue']['photos']['groups'][0]['items'][0]['suffix']
+        if venue_response['response']['venue']['photos']['count'] != 0
+          prefix = venue_response['response']['venue']['photos']['groups'][0]['items'][0]['prefix']
+          suffix = venue_response['response']['venue']['photos']['groups'][0]['items'][0]['suffix']
 
-        recent_item[:venue_photo] = "#{prefix}300x300#{suffix}"
+          recent_item[:venue_photo] = "#{prefix}300x300#{suffix}"
+        else
+          recent_item[:venue_photo] = "https://www.socabelec.co.ke/wp-content/uploads/no-photo-14.jpg"
+        end
       end
     end
 
